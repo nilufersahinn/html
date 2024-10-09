@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>nilsacode - Contact</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Genel stil dosyası -->
+    <link rel="stylesheet" href="contact-styles.css"> <!-- Contact sayfasına özel stil dosyası -->
+    <link rel="icon" href="images/logo.jpeg" type="image/x-icon"> <!-- Favicon eklendi -->
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script> <!-- reCAPTCHA scripti -->
+</head>
+<body>
+    <header>
+        <div class="top-bar">
+            <div class="logo">
+                <a href="index.html"><img src="images/blob-62041e3.png" alt="Logo" class="site-logo"></a>
+                <span class="site-title">nilsacode</span>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle">Programming Languages</a>
+                        <div class="dropdown-content">
+                            <a href="html.html">HTML</a>
+                            <a href="css.html">CSS</a>
+                            <a href="java.html">JAVA</a>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="contact-page">
+        <br>
+        <h1>CONTACT ME</h1>
+        <br>
+        <h2>HOW CAN I HELP?</h2>
+        <div class="contact-form-container">
+            <div class="contact-background"></div> <!-- Background divini düzelttim -->
+            <form class="contact-form" id="contactForm" action="process-form.php" method="POST">
+                <h2>Contact Form</h2>
+                <label for="first-name">First Name</label>
+                <input type="text" id="first-name" name="first-name" required>
+
+                <label for="last-name">Last Name</label>
+                <input type="text" id="last-name" name="last-name" required>
+                <br>
+
+                <label for="email">E-mail</label>
+                <input type="email" id="email" name="email" required>
+                <br>
+
+                <label for="message">Your Message</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+
+                <div class="g-recaptcha" data-sitekey="YOUR_SITE_KEY"></div> <!-- reCAPTCHA öğesi -->
+
+                <input type="submit" value="Send">
+            </form>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Teknoloji Dünyası. Tüm hakları saklıdır.</p>
+        </div>
+    </footer>
+</body>
+</html>

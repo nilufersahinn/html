@@ -1,0 +1,254 @@
+/* Genel Stil Ayarları */
+* {
+    margin: 0; /* Tüm elemanların dış kenar boşluklarını sıfırlar */
+    padding: 0; /* Tüm elemanların iç kenar boşluklarını sıfırlar */
+    box-sizing: border-box; /* Elemanların boyutlarını içerik, padding ve border'ı kapsayacak şekilde ayarlar */
+    font-family: Arial, sans-serif; /* Tüm sayfa genelinde Arial yazı tipini kullanır, Arial mevcut değilse sans-serif kullanılır */
+}
+
+body {
+    line-height: 1.6; /* Satır yüksekliğini 1.6 olarak ayarlar, metin satırları arasındaki boşluğu artırır */
+    color: #708090; /* Metin rengini beyaz yapar */
+    background-color: black; /* Arka plan rengini bej yapar */
+    padding-top: 0px; /* Üst kısımdaki iç boşluğu 60 piksel olarak ayarlar, genellikle sabit üst çubuk için boşluk bırakır */
+}
+
+.header-background {
+    background: url('images/galaxy.jpg') no-repeat center center/cover; /* Arka plan resmi olarak 'harika5.webp' dosyasını kullanır, resmi tekrar etmeden, ortada ve kaplayıcı şekilde gösterir */
+    height: 300vh; /* Yüksekliği viewport yüksekliğinin tamamı kadar yapar */
+    display: flex; /* Flexbox düzenini kullanır */
+    flex-direction: column; /* Elemanları dikey yönde hizalar */
+    justify-content: center; /* Elemanları dikey olarak ortalar */
+    align-items: center; /* Elemanları yatay olarak ortalar */
+    position: relative; /* Konumlandırma bağlamı sağlar, içindeki öğelerin konumlandırması için */
+}
+
+.about-header {
+    background: none; /* Arka plan rengini veya resmini kaldırır */
+    height: auto; /* Yüksekliği içeriğin yüksekliğine göre ayarlar */
+}
+
+.top-bar {
+    width: 100%; /* Üst çubuğun genişliğini tam sayfa genişliği yapar */
+    position: fixed; /* Üst çubuğu sabitler, sayfa kaydırılsa bile üstte kalır */
+    top: 0; /* Üst kenardan sıfır piksel uzaklıkta konumlandırır */
+    background-color: rgba(0, 0, 0, 0); /* Yarı şeffaf siyah arka plan rengi sağlar */
+    display: flex; /* Flexbox düzenini kullanır */
+    justify-content: space-between; /* Elemanları yatayda iki uçta hizalar */
+    align-items: center; /* Elemanları dikeyde ortalar */
+    padding: 10px 20px; /* Üst ve alt boşluğu 10px, sağ ve sol boşluğu 20px yapar */
+    z-index: 1000; /* Diğer içeriklerin üstünde görünmesini sağlar */
+}
+
+.logo {
+    display: flex; /* Flexbox düzenini kullanır */
+    align-items: center; /* Logo içindeki öğeleri dikeyde ortalar */
+}
+
+.logo img.site-logo {
+    height: 50px; /* Logo resminin yüksekliğini 50 piksel yapar */
+    width: auto; /* Logo resminin genişliğini otomatik ayarlar, orantıyı korur */
+}
+
+.site-title {
+    color: #ffffff; /* Site başlığının rengini beyaz yapar */
+    margin-left: 10px; /* Site başlığı ile logonun arasına 10 piksel boşluk ekler */
+    font-size: 24px; /* Site başlığının yazı boyutunu 24 piksel yapar */
+}
+
+nav ul {
+    list-style: none; /* Liste işaretlerini kaldırır */
+    display: flex; /* Menü öğelerini yan yana hizalar */
+}
+
+nav ul li {
+    margin-left: 20px; /* Menü öğeleri arasına 20 piksel boşluk ekler */
+}
+
+nav ul li a {
+    color: #fff; /* Menü bağlantılarının metin rengini beyaz yapar */
+    text-decoration: none; /* Bağlantı alt çizgisini kaldırır */
+    padding: 5px 10px; /* Bağlantıların iç boşluklarını 5px üst-alt ve 10px sağ-sol olarak ayarlar */
+    border-radius: 5px; /* Köşeleri 5 piksel yuvarlatır */
+    transition: background-color 0.3s; /* Arka plan renginin değişim süresini 0.3 saniye yapar */
+}
+
+nav ul li a:hover {
+    background-color: #a52d2d; /* Üzerine gelindiğinde arka plan rengini gri yapar */
+}
+
+.dropdown {
+    position: relative; /* Açılır menü konumlandırmasını bağlam sağlar */
+}
+
+.dropdown-content {
+    display: none; /* Açılır menüyü varsayılan olarak gizler */
+    position: absolute; /* Açılır menüyü ana kapsayıcının mutlak konumuna göre konumlandırır */
+    background-color: #333; /* Açılır menünün arka plan rengini koyu gri yapar */
+    min-width: 160px; /* Açılır menünün minimum genişliğini 160 piksel yapar */
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); /* Açılır menüye gölge ekler */
+    z-index: 1; /* Açılır menüyü diğer öğelerin üstünde gösterir */
+}
+
+.dropdown-content a {
+    color: #fff; /* Açılır menü bağlantılarının metin rengini beyaz yapar */
+    padding: 12px 16px; /* Bağlantıların iç boşluklarını 12px üst-alt ve 16px sağ-sol olarak ayarlar */
+    text-decoration: none; /* Bağlantı alt çizgisini kaldırır */
+    display: block; /* Her bir bağlantıyı blok olarak gösterir */
+}
+
+.dropdown-content a:hover {
+    background-color: #575757; /* Üzerine gelindiğinde arka plan rengini gri yapar */
+}
+
+.dropdown:hover .dropdown-content {
+    display: block; /* Menü öğesi üzerine gelindiğinde açılır menüyü gösterir */
+}
+
+.section {
+    padding: 60px 0; /* Bölümün üst ve alt boşluklarını 60 piksel yapar */
+    text-align: center; /* İçerikleri yatayda ortalar */
+}
+
+.container {
+    width: 80%; /* İçeriğin genişliğini sayfa genişliğinin %80'i yapar */
+    margin: 0 auto; /* İçeriği yatayda ortalar */
+}
+
+.about-image {
+    max-width: 300px; /* Resmin maksimum genişliğini 300 piksel yapar */
+    height: auto; /* Resmin yüksekliğini orantılı olarak ayarlar */
+    margin: 20px 0; /* Resmin üst ve altına 20 piksel boşluk ekler */
+}
+
+.highlight {
+    color: rgb(201, 140, 218); /* Öne çıkan metin rengini mor yapar */
+    font-weight: lighter; /* Metin kalınlığını hafif yapar */
+}
+
+/* Animasyon */
+@keyframes slideIn {
+    0% {
+        transform: translateY(-100%); /* Animasyonun başlangıç noktasında yukarıda konumlanır */
+        opacity: 0; /* Görünürlük sıfır, yani tamamen şeffaf */
+    }
+    100% {
+        transform: translateY(0); /* Animasyonun sonunda normal konumuna gelir */
+        opacity: 1; /* Tamamen görünür olur */
+    }
+}
+
+.section h2 {
+    animation: slideIn 10s ease-out; /* Başlıkların animasyonunu 'slideIn' tanımıyla 10 saniyede uygulayan geçiş efekti */
+}
+
+/* About sayfası için özel stil */
+.about-header {
+    background: none; /* Arka plan rengini veya resmini kaldırır */
+}
+
+/* Contact sayfası için stil */
+.contact-container {
+    background-color: #caed91; /* Arka plan rengini açık yeşil yapar */
+    display: flex; /* Flexbox düzenini kullanır */
+    flex-direction: column; /* İçeriği dikey yönde hizalar */
+    align-items: center; /* İçeriği yatayda ortalar */
+    padding: 20px 20px; /* İçeriğin üst ve altına 20 piksel, sağ ve soluna 20 piksel iç boşluk ekler */
+    min-height: 50vh; /* Bölümün minimum yüksekliğini viewport yüksekliğinin %50'si yapar */
+    text-align: center; /* İçeriği yatayda ortalar */
+}
+
+.contact-title {
+    font-size: 48px; /* Başlık yazı boyutunu 48 piksel yapar */
+    margin-bottom: 20px; /* Başlığın altına 20 piksel boşluk ekler */
+    color: #000; /* Başlığın rengini siyah yapar */
+    text-align: center; /* Başlığı ortalar */
+}
+
+.contact-subtitle {
+    font-size: 24px; /* Alt başlık yazı boyutunu 24 piksel yapar */
+    margin-bottom: 40px; /* Alt başlığın altına 40 piksel boşluk ekler */
+    color: #000; /* Alt başlığın rengini siyah yapar */
+    text-align: 5; /* Bu özellik yanlış, geçerli değeri center olabilir */
+}
+
+.contact-form-container {
+    position: relative; /* Konumlandırma bağlamı sağlar */
+    width: 100%; /* Form kapsayıcısının genişliğini tam sayfa genişliği yapar */
+    max-width: 600px; /* Maksimum genişliği 600 piksel yapar */
+    margin: 0 auto; /* Yatayda ortalar */
+}
+
+.contact-background {
+    position: absolute; /* Arka plan resmini mutlak konumlandırır */
+    width: 100%; /* Arka plan resminin genişliğini tam sayfa genişliği yapar */
+    height: 100%; /* Arka plan resminin yüksekliğini kapsayıcının yüksekliği kadar yapar */
+    top: 0; /* Üstten sıfır piksel uzaklıkta konumlandırır */
+    left: 0; /* Soldan sıfır piksel uzaklıkta konumlandırır */
+    z-index: -1; /* Arka planı diğer içeriklerin arkasında gösterir */
+    opacity: 0.1; /* Arka plan resminin opaklığını %10 yapar */
+}
+
+.contact-form {
+    position: relative; /* Konumlandırma bağlamı sağlar */
+    z-index: 1; /* Formu diğer öğelerin üstünde gösterir */
+    padding: 20px; /* Formun iç boşluklarını 20 piksel yapar */
+    background-color: rgba(114, 166, 200, 0.8); /* Form arka plan rengini yarı şeffaf mavi yapar */
+    border-radius: 10px; /* Köşeleri 10 piksel yuvarlatır */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Forma hafif bir gölge ekler */
+}
+
+.contact-form h2 {
+    font-size: 32px; /* Form başlığının yazı boyutunu 32 piksel yapar */
+    margin-bottom: 20px; /* Form başlığının altına 20 piksel boşluk ekler */
+    color: #000; /* Form başlığının rengini siyah yapar */
+}
+
+.contact-form label {
+    display: block; /* Etiketleri blok olarak gösterir */
+    margin-bottom: 10px; /* Etiketlerin altına 10 piksel boşluk ekler */
+    font-size: 18px; /* Etiket yazı boyutunu 18 piksel yapar */
+    color: #000; /* Etiketlerin rengini siyah yapar */
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%; /* Giriş ve metin alanlarının genişliğini tam kapsayıcı genişliği yapar */
+    padding: 10px; /* İç boşluklarını 10 piksel yapar */
+    margin-bottom: 20px; /* Altına 20 piksel boşluk ekler */
+    border: 1px solid #ccc; /* 1 piksel genişliğinde açık gri sınır ekler */
+    border-radius: 5px; /* Köşeleri 5 piksel yuvarlatır */
+    font-size: 16px; /* Yazı boyutunu 16 piksel yapar */
+}
+
+.contact-form input[type="submit"] {
+    background-color: #4CAF50; /* Gönder butonunun arka plan rengini yeşil yapar */
+    color: white; /* Gönder butonundaki metin rengini beyaz yapar */
+    border: none; /* Sınırları kaldırır */
+    cursor: pointer; /* Fare ile üzerine gelindiğinde işaretçi işaretini gösterir */
+    font-size: 18px; /* Metin boyutunu 18 piksel yapar */
+    border-radius: 5px; /* Köşeleri 5 piksel yuvarlatır */
+}
+
+.contact-form input[type="submit"]:hover {
+    background-color: #45a049; /* Fare ile üzerine gelindiğinde arka plan rengini daha koyu yeşil yapar */
+}
+
+.social-media-icons {
+    display: flex; /* Sosyal medya ikonlarını flex düzeninde gösterir */
+    justify-content: center; /* İkonları yatayda ortalar */
+    gap: 20px; /* İkonlar arasında 20 piksel boşluk bırakır */
+}
+
+.social-icon {
+    width: 40px; /* Sosyal medya ikonlarının genişliğini 40 piksel yapar */
+    height: 40px; /* Sosyal medya ikonlarının yüksekliğini 40 piksel yapar */
+    object-fit: cover; /* İkonların orantısını korur ve kapsayıcıyı doldurur */
+}
+
+.JAVA-title {
+    font-size: 48px; /* Başlık yazı boyutunu 48 piksel yapar */
+    margin-bottom: 20px; /* Başlığın altına 20 piksel boşluk ekler */
+    color: #000; /* Başlığın rengini siyah yapar */
+    text-align: center; /* Başlığı ortalar */
+}

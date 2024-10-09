@@ -1,0 +1,83 @@
+<!DOCTYPE html> <!-- HTML5 belgesi olduğunu belirten bir bildirim -->
+<html lang="tr"> <!-- Sayfanın dilini Türkçe olarak ayarlar -->
+<head>
+    <meta charset="UTF-8"> <!-- Sayfanın karakter kodlamasını UTF-8 olarak ayarlar -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Mobil uyumlu görünüm için viewport ayarlarını yapar -->
+    <title>nilsacode</title> <!-- Tarayıcı sekmesinde görünen sayfa başlığı -->
+    <link rel="stylesheet" href="styles.css"> <!-- Sayfanın stil dosyasını bağlar -->
+    <link rel="icon" href="images/logo.jpeg" type="image/x-icon"> <!-- Sayfanın favicon simgesini belirler -->
+</head>
+<body>
+    <header class="header-background"> <!-- Sayfanın üst kısmını tanımlar, arka plan rengi sınıfı ile stilize edilir -->
+        <div class="top-bar"> <!-- Üst çubuğu oluşturur -->
+            <div class="logo"> <!-- Logo kısmı -->
+                <a href="index.html"><img src="images/blob-62041e3.png" alt="Logo" class="site-logo"></a> <!-- Logo resmi, ana sayfaya yönlendirir -->
+                <span class="site-title">nilsacode</span> <!-- Web sitesinin başlığını gösterir -->
+            </div>
+            <nav> <!-- Navigasyon menüsü -->
+                <ul> <!-- Menü öğelerini listeleyen kapsayıcı -->
+                    <li><a href="index.html">Home</a></li> <!-- Ana sayfaya bağlantı -->
+                    <li><a href="about.html">About</a></li> <!-- Hakkında sayfasına bağlantı -->
+                    <li><a href="contact.html">Contact</a></li> <!-- İletişim sayfasına bağlantı -->
+                    <li class="dropdown"> <!-- Açılır menü için kapsayıcı -->
+                        <a href="#" class="dropdown-toggle">Programming Languages</a> <!-- Açılır menü başlığı -->
+                        <div class="dropdown-content"> <!-- Açılır menü içeriği -->
+                            <a href="html.html">HTML</a> <!-- HTML sayfasına bağlantı -->
+                            <a href="css.html">CSS</a> <!-- CSS sayfasına bağlantı -->
+                            <a href="java.html">JAVA</a> <!-- Java sayfasına bağlantı -->
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main> <!-- Ana içerik alanı -->
+        <!-- Birinci Kısım -->
+        <section class="section" id="home"> <!-- Ana sayfa bölümü -->
+            <div class="container"> <!-- İçeriği kapsayan div -->
+                <h2>Welcome to the Galaxy of Technology and Programming</h2> <!-- Bölüm başlığı -->
+                <p>
+                    At <span class="highlight">nilsacode</span>, my mission is to present everything touched by technology in an understandable and effective way. I particularly aim to explain various programming languages clearly and comprehensively. For a more enjoyable learning experience, you can access solved problems and thoroughly reviewed pre-prepared projects. Welcome to <span class="highlight">nilsacode</span>, never lose your thirst for learning!
+                </p> <!-- Bilgilendirme metni -->
+            </div>
+        </section>
+
+        <!-- İkinci Kısım -->
+        <section class="section" id="about"> <!-- Hakkında bölümü -->
+            <div class="container"> <!-- İçeriği kapsayan div -->
+                <img src="images/home-about.jpg" alt="About Image" class="about-image"> <!-- Hakkında bölümüne ait resim -->
+            </div>
+        </section>
+
+        <!-- Üçüncü Kısım: Find Me -->
+        <section class="section" id="find-me"> <!-- Sosyal medya bağlantıları bölümü -->
+            <div class="container"> <!-- İçeriği kapsayan div -->
+                <hr> <!-- Bölücü çizgi -->
+                <h2 class="find-me-title">Find Me</h2> <!-- Bölüm başlığı -->
+                <div class="social-media-icons"> <!-- Sosyal medya ikonlarının kapsayıcısı -->
+                    <a href="https://www.linkedin.com/in/nil%C3%BCfer-%C5%9Fahin-b66362225/" target="_blank"> <!-- LinkedIn bağlantısı -->
+                        <img src="images/linkedin (1).png" alt="LinkedIn" class="social-icon"> <!-- LinkedIn ikon resmi -->
+                    </a>
+                    <a href="https://www.instagram.com/niluferssahinn/" target="_blank"> <!-- Instagram bağlantısı -->
+                        <img src="images/instagram (1).png" alt="Instagram" class="social-icon"> <!-- Instagram ikon resmi -->
+                    </a>
+                    <a href="https://github.com/nilufersahinn" target="_blank"> <!-- GitHub bağlantısı -->
+                        <img src="images/github (1).png" alt="GitHub" class="social-icon"> <!-- GitHub ikon resmi -->
+                    </a>
+                    <a href="https://www.facebook.com/nilufer.sahin.188" target="_blank"> <!-- Facebook bağlantısı -->
+                        <img src="images/facebook (2).png" alt="Facebook" class="social-icon"> <!-- Facebook ikon resmi -->
+                    </a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer> <!-- Alt bilgi bölümü -->
+        <div class="container"> <!-- İçeriği kapsayan div -->
+            <p>&copy; 2024 Teknoloji Dünyası. Tüm hakları saklıdır.</p> <!-- Telif hakkı metni -->
+        </div>
+    </footer>
+</body>
+</html>
